@@ -1,0 +1,47 @@
+.registration-main{
+    .main-body{
+        padding-top:150px;
+
+        .body-title{
+            text-align: center;
+            font-size: 55px;
+            font-weight: 600;
+            margin-bottom: 88px;
+        }
+        .btn-registration{
+            width: 1346px;
+            border-radius: 45px;
+            padding: 50px 0;
+            font-size: 45px;
+            font-weight: 500; 
+            grid-column: span 2;
+        }
+    }
+}
+.table-input{
+    margin:0 auto;
+    display: grid;
+    max-width: 1346px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 162px;
+    row-gap: 52px;
+    margin-bottom: 95px;
+
+    .input{
+        border:2px solid #585858;
+        border-radius: 40px;
+        padding: 35px 0 35px 40px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .choice-role{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .role{
+            display: block;
+            padding:53px 68px;
+            text-align: center;
+            border:2px solid #FFD94E;
+        }
+    }
+}

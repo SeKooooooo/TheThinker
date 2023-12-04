@@ -1,0 +1,51 @@
+.tests-main{
+    .main-body{
+        padding-top:80px;
+        .body-title{
+            text-align: center;
+            font-size: 48px;
+            font-weight: 500;
+            margin-bottom: 65px;
+        }
+        form{
+            margin: 0 auto;
+            width: 1114px;
+            margin-bottom: 43px;
+
+            input{
+                width: 100%;
+                padding:20px 67px;
+                padding-right: 0;
+                background-color: #ECECEC;
+                color: #757575;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+.tests{
+    margin: 0 auto;
+    width: 1560px;
+    height: 956px;
+    border:10px solid #717171;
+    border-radius: 10px;
+    overflow: auto;
+
+    .list-tests{
+        padding:56px 78px 56px 48px;
+        a{
+            background: #FFD94E url('../img/ellipse.svg') 38px center no-repeat;
+            display: inline-block;
+            padding: 45px 96px;
+            padding-right: 0; 
+            width: 100%;
+            border-radius: 15px;
+        }
+        li{
+            margin-bottom: 18px;
+        }
+        li:last-child{
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color:#000000;
+}
+
+body a{
+    color:#000000;
+}
+
+.hello-main{
+    background: #FFFFFF url('../img/bg_hello.png') 27px 17px no-repeat;
+
+    .main-body{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        .body-info{
+            margin-top: 300px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1{
+            font-size: 45px;
+            font-weight: 700; 
+            margin-bottom: 30px;
+        }
+
+        .body-text{
+            color:#8B8B8B;
+            margin-bottom: 50px;
+        }
+    }
+
+}
+
+.btn-registration{
+    width: 100%;
+    padding: 60px 0;
+    background-color: #FFC801;
+    border:1px solid #FFC801;
+    border-radius: 70px;
+    
+    a{
+        font-size: 40px;
+        font-weight: 500;
+    }
+}

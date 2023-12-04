@@ -1,0 +1,44 @@
+.login-main{
+    .main-body{
+        padding-top:150px;
+
+        .body-title{
+            text-align: center;
+            font-size: 55px;
+            font-weight: 600;
+            margin-bottom: 88px;
+        }
+        .btn-registration{
+            width:674px;
+            margin:0 483px;
+            border-radius: 45px;
+            padding: 50px 0;
+            font-size: 45px;
+            font-weight: 500;
+        }
+    }
+}
+.column-input{
+    display: flex;
+    flex-direction: column;
+    max-width: 592px;
+    margin: 0 auto 164px auto;
+
+    .input{
+        border:2px solid #585858;
+        border-radius: 40px;
+        padding: 35px 0 35px 40px;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 52px;
+    }
+    .last{
+        margin-bottom: 0;
+    }
+    .no-pass{
+        font-size: 20px;
+        color:#655F4B;
+        text-decoration: underline;
+        align-self: flex-end;
+        margin-right: 15px;
+    }
+}
