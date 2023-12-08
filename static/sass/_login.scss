@@ -1,41 +1,45 @@
 .login-main{
     .main-body{
-        padding-top:150px;
-
+        padding-top:80px;
         .body-title{
             text-align: center;
-            font-size: 55px;
+            font-size: 34px;
             font-weight: 600;
-            margin-bottom: 88px;
+            margin-bottom: 65px;
         }
-        .btn-registration{
-            width:674px;
-            margin:0 483px;
-            border-radius: 45px;
-            padding: 50px 0;
-            font-size: 45px;
+        .btn-login{
+            width: 100%;
+            border-radius: 20px;
+            padding: 20px 0;
+            font-size: 26px;
             font-weight: 500;
+            background-color: #FFC801;
+            border:1px solid #FFC801;
+            margin-top: 28px;
         }
     }
 }
 .column-input{
     display: flex;
     flex-direction: column;
-    max-width: 592px;
+    align-items: center;
+    max-width: 388px;
     margin: 0 auto 164px auto;
 
     .input{
+        width: 100%;
         border:2px solid #585858;
-        border-radius: 40px;
-        padding: 35px 0 35px 40px;
+        border-radius: 20px;
+        padding: 25px 0 25px 27px;
         font-family: 'Montserrat', sans-serif;
-        margin-bottom: 52px;
-    }
-    .last{
-        margin-bottom: 0;
+        margin-bottom: 26px;
+        font-size: 16px;
+        &-last{
+            margin-bottom: 0;
+        }
     }
     .no-pass{
-        font-size: 20px;
+        font-size: 14px;
         color:#655F4B;
         text-decoration: underline;
         align-self: flex-end;
