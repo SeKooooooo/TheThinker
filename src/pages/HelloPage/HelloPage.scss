@@ -1,3 +1,53 @@
+
+.container-header{
+    max-width: 1400px;
+    padding:0 60px;
+    margin: 0 auto;
+    
+}
+
+.container-main{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding:0 60px;
+    height: 91vh;
+}
+
+.header{
+    color:#FFFFFF;
+    background-color: #FFC801;
+}
+
+.header a{
+    color:#FFFFFF;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.header-nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.nav-links{
+    display:flex;
+    gap:90px;
+    align-items: center;
+}
+
+.next{
+    padding-right: 30px;
+    background: url('../../image/arrow.svg') right center no-repeat;
+    background-size: 15px 15px;
+}
+
+.profile{
+    width: 50px;
+    height: 50px;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
@@ -13,7 +63,7 @@ body a{
         display: flex;
         flex-direction: column;
         align-items: end;
-        background: #FFFFFF url('../img/bg_hello.png') 27px 100px no-repeat;
+        background: #FFFFFF url('../../image/bg_hello.png') 27px 100px no-repeat;
         background-size: 610px 562px;
         padding-bottom:60px;
 
@@ -36,7 +86,6 @@ body a{
             margin-bottom: 50px;
         }
     }
-
 }
 
 .btn-registration{
