@@ -8,7 +8,7 @@ const ListSubject = () => {
             <Subject name='Математика' />
             <Subject name='Физика' />
             <Subject name='Информатика' />
-            <Subject name='Англ.язык' />
+            <Subject name='Английский язык'/>
             <Subject name='Русский язык' />
             <li><a className="item-subjects" href="">Название <br/> предмета</a></li>
         </ul>

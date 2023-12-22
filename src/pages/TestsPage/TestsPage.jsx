@@ -3,9 +3,10 @@ import './TestsPage.scss'
 import Header from "../../components/Header";
 import Title from "../../components/UI/Title";
 import ListTest from "../../components/ListTest";
+import { ChangeEnding } from "../../utils/ChangeEnding";
 
 const TestsPage = () => {
-    const name = `Тесты по ${localStorage.getItem('name')}`
+    const name = `Тесты по ${ChangeEnding(localStorage.getItem('name'))}`
     return(
         <>
         <Header/>
