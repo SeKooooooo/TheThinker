@@ -1,12 +1,33 @@
 .subject-main{
     .main-body{
         padding:80px 0;
+        text-align: center;
 
         .body-title{
             text-align: center;
             font-size: 34px;
             font-weight: 500;
             margin-bottom: 50px;
+        }
+
+        input{
+            border: 2px solid #000;
+            width: 100%;
+            padding:20px 46px;
+            padding-right: 0;
+            background-color: #ECECEC;
+            color: #757575;
+            border-radius: 20px;
+            font-size: 16px;
+            margin: 0 auto;
+            width: 534px;
+            margin-bottom: 43px;
+        }
+        
+        .error{
+            text-align: center;
+            color:#000;
+            font-size: 20px;
         }
     }
 }

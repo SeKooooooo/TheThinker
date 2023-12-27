@@ -1,20 +1,37 @@
 import React, { useState } from "react";
 import '../css/BodyTest.scss'
 import ItemTest from "./ItemTest";
+import TestTasks from "./TestTasks";
 
 const BodyTest = () => {
 
     const [numItemTest, setNumItemTest] = useState(1)
     const test = [
         {
+            id:1,
             question:"Какая самая высокая гора в мире?",
             answers:["Эверест","Эльбрус","Арарат","Олимп"]
         },
         {
-            question:"Кто лох",
-            answers:["Эверест","Эльбрус","Арарат","Олимп"]
+            id:2,
+            question:"Кто он",
+            answers:["Lasdff","adadas","aasdfasd","ssdfsd"]
+        },
+        {   
+            id:3,
+            question:"Кто она",
+            answers:["Lasdff","dfasdffs","asdasd","dsf"]
+        },
+        {
+            id:4,
+            question:"Кто мы",
+            answers:["Lasdff","adadas","asdasd","sadasd"]
         }
     ]
+
+    const ChangeNum=(num)=>{
+        setNumItemTest(num)
+    }
 
     return(
         <main className="test-main">
@@ -23,15 +40,7 @@ const BodyTest = () => {
                     <ItemTest itemTest={test[numItemTest-1]}/>
                 </div>
             </div>
-            <div className="tasks">
-                <div className="list-tasks">
-                    <button className="tasks-item">1</button>
-                    <button className="tasks-item">2</button>
-                    <button className="tasks-item">3</button>
-                    <button className="tasks-item">4</button>
-                    <button className="tasks-item">5</button>
-                </div>
-            </div>
+            <TestTasks test={test} change={ChangeNum} curnum={numItemTest}/>
         </main>
     )
 }

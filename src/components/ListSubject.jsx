@@ -1,16 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import Subject from "./UI/Subject";
 
-const ListSubject = () => {
+const ListSubject = ({subjects}) => {
+    if(!subjects.length){
+        console.log(2);
+        return  <div className="error">Предметы не найдены</div>
+    }
 
     return(
         <ul className="table-subjects">
-            <Subject name='Математика' />
-            <Subject name='Физика' />
-            <Subject name='Информатика' />
-            <Subject name='Английский язык'/>
-            <Subject name='Русский язык' />
-            <li><a className="item-subjects" href="">Название <br/> предмета</a></li>
+            {
+                subjects.map((e,i) =><Subject name={e} key={i}/>)
+            }
         </ul>
     )
 }

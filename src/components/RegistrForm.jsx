@@ -52,10 +52,14 @@ const RegistrForm = () => {
                         placeholder="Образовательное учреждение" className="input input-school"/>
                 </div>
                 <div className="choice-role">
-                    <input type="radio" name="role" className ="role" value="student" id="student"/>
-                    <label for="student">Я ученик</label>
-                    <input type="radio" name="role" className ="role" value="teacher" id="teacher"/>
-                    <label for="teacher">Я учитель</label>
+                    <label className ="role" for="student">
+                        <span >Я ученик</span>
+                        <input type="radio" name="role" value="student" id="student"/>
+                    </label>
+                    <label className ="role" for="teacher">
+                        <span >Я учитель</span>
+                        <input type="radio" name="role" value="teacher" id="teacher"/>
+                    </label>
                 </div>                      
                 <button disabled={!email.inputValid || !password.inputValid || !name.inputValid || !date.inputValid || !school.inputValid} 
                 className="btn-registration" type="submit">Зарегистрироваться</button>

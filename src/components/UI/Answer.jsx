@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Answer = ({text,index}) =>{
+const Answer = ({text,index,id}) =>{
+    const [checked, setChecked] = useState(false);
+
+    function changeCheckbox() {
+        clickAnswer(value)
+     }
+
     const numbers={
-        0:"firts",
+        0:"first",
         1:"second",
         2:"third",
         3:"fouth"
     }
+
+    console.log(id);
     const i = index
     const num = numbers[i]
+    const clickAnswer= (value) =>{
+        localStorage.setItem(String(id), value)
+    }
+
     return (
         <li className="answer-item"> 
             <label for={num} class="answer">
-                <input  type="radio" name="answer" value={num}/>
+                <input onChange={e=>changeCheckbox(e.target.value)} checked={checked} type="radio" name="answer" id={num} value={i}/>
                 <span>{text}</span>           
             </label>
         </li>

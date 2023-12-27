@@ -1,9 +1,16 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 
-const Test = ({name}) => {
+const Test = ({id,topic,teacher}) => {
+    const title = `Тема: ${topic}, Преподаватель: ${teacher} `
+    const clickTest=() =>{
+        localStorage.setItem('test', id)
+    }
+
     return (
-        <li><Link className="tests-item" to="/subject_map/tests/test">{name}</Link></li>
+        <li onClick={clickTest}>
+            <Link  className="tests-item" to="/subject_map/tests/test">{title}</Link>
+        </li>
     )
 }
 

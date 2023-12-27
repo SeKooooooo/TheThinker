@@ -6,7 +6,7 @@ import EntranceTest from "../../components/EntranceTest";
 
 const TestPage = () => {
     const [testBody, setTestBody] = useState(false)
-   
+    const testId= localStorage.getItem('test')
     
     const ChangeFilling = () => {
         setTestBody(true)

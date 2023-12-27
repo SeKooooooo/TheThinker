@@ -7,7 +7,7 @@ const ItemTest = ({itemTest}) =>{
         <div className="item-test">
             <div className="task">
                 <p className="task-question">{itemTest.question}</p>
-                <TestForm answers={itemTest.answers}/>
+                <TestForm answers={itemTest.answers} id={itemTest.id}/>
             </div>
             <div className="timer">
                 У вас осталось: 2 минуты 30 секунд

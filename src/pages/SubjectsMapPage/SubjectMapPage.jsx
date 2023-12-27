@@ -1,21 +1,42 @@
-import React from "react";
+import React,{useState,useMemo} from "react";
 import Header from "../../components/Header";
 import "./SubjectMapPage.scss"
 import ListSubject from "../../components/ListSubject";
 import Title from "../../components/UI/Title";
+import ModalSearchSubject from "../../components/UI/Modal/ModalSearchSubject";
+import Subject from "../../components/UI/Subject";
+import InputSearch from "../../components/UI/Input";
+import Main from "../../components/UI/Main";
+import Input from "../../components/UI/Input";
 
 const SubjectMapPage = () =>{
+    const [subjects,setSubjects] =useState([
+        'Математика','Физика','Информатика',
+        'Английский язык','Русский язык'
+    ])
+
+    const [searchQuery, setSearchQuery] = useState('')
+
+    const searchSubj = useMemo(() =>{
+        if(searchQuery){
+            return subjects.filter(subject => subject.toLowerCase().includes(searchQuery.toLowerCase()))
+        }
+        return subjects
+    },[searchQuery,subjects]) 
+
     return (
         <div>
             <Header/>
-            <main className="subject-main">
-                <div className="container-main">
-                    <div className="main-body">
-                        <Title name='Выбери предмет:'/>
-                        <ListSubject/>
-                    </div>
-                </div>
-            </main>
+            <Main name = 'subject'>
+                <Title name='Выбери предмет:'/>
+                <Input
+                    type="text"
+                    placeholder="Найти нужный предмет..."
+                    onChange={e => setSearchQuery(e.target.value)}
+                    value = {searchQuery}
+                />
+                <ListSubject subjects={searchSubj}/>
+            </Main>
         </div>
     )
 }

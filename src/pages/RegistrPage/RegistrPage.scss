@@ -1,4 +1,5 @@
 .registration-main{
+    color:#000;
     .main-body{
         padding-top:80px;
         .body-title{
@@ -50,11 +51,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap:20px;
+        input[type="radio"]{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+        }
         .role{
             display: block;
-            padding:53px 68px;
+            padding:30px 40px;
             text-align: center;
             border:2px solid #FFD94E;
+            border-radius: 20px;
+            background-color: #FFD94E;
+            cursor: pointer;
+        }
+        input[type="radio"]:checked + span{
+            color: #fff;
         }
     }
 }
