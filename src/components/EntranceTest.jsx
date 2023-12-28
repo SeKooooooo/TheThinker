@@ -1,10 +1,13 @@
 import React from "react";
 import Title from "./UI/Title";
 import TestInfoItem from "./TestInfoItem";
+import {changeTime} from "../hooks/changeTime";
 
-const EntranceTest = ({change}) => {
+const EntranceTest = ({change,countAns}) => {
     const name = localStorage.getItem('name')
-
+    const genTime = Number(localStorage.getItem('genTime'))
+    const changeGenTime=changeTime(genTime)
+    console.log(changeGenTime);
     return(
         <main className="entrance-test-main">
             <div className="container-main">
@@ -13,8 +16,8 @@ const EntranceTest = ({change}) => {
                     <ul className="test-info">
                         <TestInfoItem keys={'Предмет:'} value={name}/>
                         <TestInfoItem keys={'Автор:'} value={"Головач Е. М."}/>
-                        <TestInfoItem keys={'Время на прохождение:'} value={"15 мин."}/>
-                        <TestInfoItem keys={'Кол-во вопросов:'} value={10}/>
+                        <TestInfoItem keys={'Время на прохождение:'} value={`${changeGenTime.minute}:${changeGenTime.second}`}/>
+                        <TestInfoItem keys={'Кол-во вопросов:'} value={countAns}/>
                         <button onClick={() => change()} className="go-test">Приступить к выполнению</button>
                     </ul>
                 </div>

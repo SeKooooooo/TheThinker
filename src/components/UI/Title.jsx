@@ -1,10 +1,10 @@
 import React from "react";
 
-const Title = ({name}) => {
+const Title = ({children}) => {
 
     return(
         <h1 className="body-title">
-            {name}
+            {children}
         </h1>
     )
 }

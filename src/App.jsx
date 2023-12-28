@@ -6,6 +6,7 @@ import RegistrPage from "./pages/RegistrPage/RegistrPage.jsx";
 import SubjectMapPage from './pages/SubjectsMapPage/SubjectMapPage.jsx';
 import TestsPage from './pages/TestsPage/TestsPage.jsx';
 import TestPage from './pages/TestPage/TestPage.jsx';
+import ProfilePage from './pages/ProfilePage/ProfilePage.jsx';
 
 function App() {
     return(
@@ -17,6 +18,7 @@ function App() {
           <Route path="/subject_map" element={<SubjectMapPage/>}/>
           <Route path="/subject_map/tests" element={<TestsPage/>}></Route>
           <Route path="/subject_map/tests/test" element={<TestPage/>}></Route>
+          <Route path="/profile" element={<ProfilePage/>}></Route>
         </Routes>
       </>
     )

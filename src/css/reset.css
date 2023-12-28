@@ -115,6 +115,10 @@ input[type=radio] {
   display: none;
 }
 
+body{
+  color: #000;
+}
+
 @font-face{
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Regular.ttf');

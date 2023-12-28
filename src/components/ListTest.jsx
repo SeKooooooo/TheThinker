@@ -2,7 +2,9 @@ import React from "react";
 import Test from "./UI/Test";
 
 const ListTest = ({tests}) => {
-    console.log(tests);
+    if(!tests.length){
+        return  <div className="error">Тесты не найдены</div>
+    }
     return (
         <ul className="list-tests">
             {

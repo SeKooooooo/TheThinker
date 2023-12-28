@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 
-const Answer = ({text,index,id}) =>{
-    const [checked, setChecked] = useState(false);
-
-    function changeCheckbox() {
-        clickAnswer(value)
-     }
+const Answer = ({text,index,id,changeTest}) =>{
 
     const numbers={
         0:"first",
@@ -14,17 +9,16 @@ const Answer = ({text,index,id}) =>{
         3:"fouth"
     }
 
-    console.log(id);
     const i = index
     const num = numbers[i]
     const clickAnswer= (value) =>{
-        localStorage.setItem(String(id), value)
+        changeTest(value)
     }
 
     return (
         <li className="answer-item"> 
             <label for={num} class="answer">
-                <input onChange={e=>changeCheckbox(e.target.value)} checked={checked} type="radio" name="answer" id={num} value={i}/>
+                <input onClick={e=>clickAnswer(e.target.value)} type="radio" name="answer" id={num} value={i}/>
                 <span>{text}</span>           
             </label>
         </li>

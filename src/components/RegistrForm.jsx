@@ -8,6 +8,7 @@ const RegistrForm = () => {
     const name = useInput('',{'isEmpty': true})
     const school = useInput('',{'isEmpty': true})
     const date = useInput('',{'isEmpty': true,'isDate':false})
+    const role = useInput('',{'isEmpty': true})
 
     return (
         <form className="registration-form">
@@ -51,17 +52,22 @@ const RegistrForm = () => {
                         value={school.value} type="text" 
                         placeholder="Образовательное учреждение" className="input input-school"/>
                 </div>
+                {(name.isDirty && name.isEmpty) && <div className="input-error">{name.infoError.isEmpty}</div>}
                 <div className="choice-role">
                     <label className ="role" for="student">
                         <span >Я ученик</span>
-                        <input type="radio" name="role" value="student" id="student"/>
+                        <input onChange={e=> role.onChange(e)} 
+                        onBlur={e=> role.onBlur(e)} type="radio"
+                         name="role" value="student" id="student"/>
                     </label>
                     <label className ="role" for="teacher">
                         <span >Я учитель</span>
-                        <input type="radio" name="role" value="teacher" id="teacher"/>
+                        <input onChange={e=> role.onChange(e)} 
+                        onBlur={e=> role.onBlur(e)} type="radio" 
+                        name="role" value="teacher" id="teacher"/>
                     </label>
                 </div>                      
-                <button disabled={!email.inputValid || !password.inputValid || !name.inputValid || !date.inputValid || !school.inputValid} 
+                <button disabled={!email.inputValid || !password.inputValid || !name.inputValid || !date.inputValid || !school.inputValid || !role.inputValid}  
                 className="btn-registration" type="submit">Зарегистрироваться</button>
             </div>
         </form>

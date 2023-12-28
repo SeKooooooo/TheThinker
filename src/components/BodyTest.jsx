@@ -1,47 +1,39 @@
 import React, { useState } from "react";
 import '../css/BodyTest.scss'
 import ItemTest from "./ItemTest";
-import TestTasks from "./TestTasks";
+import Main from "./UI/Main";
+import EndTime from "./EndTime";
 
-const BodyTest = () => {
-
+const BodyTest = ({change,test}) => {
     const [numItemTest, setNumItemTest] = useState(1)
-    const test = [
-        {
-            id:1,
-            question:"Какая самая высокая гора в мире?",
-            answers:["Эверест","Эльбрус","Арарат","Олимп"]
-        },
-        {
-            id:2,
-            question:"Кто он",
-            answers:["Lasdff","adadas","aasdfasd","ssdfsd"]
-        },
-        {   
-            id:3,
-            question:"Кто она",
-            answers:["Lasdff","dfasdffs","asdasd","dsf"]
-        },
-        {
-            id:4,
-            question:"Кто мы",
-            answers:["Lasdff","adadas","asdasd","sadasd"]
-        }
-    ]
+    const [ansUser,setAnsUser] = useState([])
+    const [endTime, setEndTime] = useState(false)
 
-    const ChangeNum=(num)=>{
-        setNumItemTest(num)
+    const lastId=test[test.length-1].id
+    localStorage.setItem('ans',JSON.stringify(ansUser))
+    const ChangeNum=(ans)=>{
+        setAnsUser([...ansUser, ans])
+        if (test[numItemTest-1].id === lastId){
+            change()
+        }else{
+            setNumItemTest(numItemTest+1)
+        }
+    }
+    
+    const ChangeEndTime=()=>{
+        setEndTime(true)
     }
 
     return(
-        <main className="test-main">
-            <div className="container-main container-main__test">
-                <div className="main-body">
-                    <ItemTest itemTest={test[numItemTest-1]}/>
-                </div>
-            </div>
-            <TestTasks test={test} change={ChangeNum} curnum={numItemTest}/>
-        </main>
+        <Main name="test">
+            {
+                !endTime?
+                <ItemTest itemTest={test[numItemTest-1]} changeTest={ChangeNum} changeEndTime={ChangeEndTime} progress={`${numItemTest}/${test.length}`}/>
+                :
+                <EndTime change={change}/>
+            }
+            
+        </Main>    
     )
 }
 

@@ -26,10 +26,15 @@ const Header = () => {
                     <a href="#" className="next">Приступим</a>
                 </div>)
             break}
+        case '/profile':{
+            links=(
+                <div className="nav-links">
+                </div>)
+            break}
         default:{
             links = (
                 <div className="nav-links">
-                    <Link href="#" className="profile"><img src={profile} alt=""/></Link>
+                    <Link to="/profile" className="profile"><img src={profile} alt=""/></Link>
                 </div>)
                 break}
     }

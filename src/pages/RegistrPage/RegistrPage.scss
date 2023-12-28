@@ -53,7 +53,7 @@
         align-items: center;
         gap:20px;
         input[type="radio"]{
-            position: absolute;
+            position: relative;
             width: 1px;
             height: 1px;
             opacity: 0;
@@ -66,9 +66,13 @@
             border-radius: 20px;
             background-color: #FFD94E;
             cursor: pointer;
+            &:hover{
+                border:2px solid #df7e00;
+            }
         }
-        input[type="radio"]:checked + span{
-            color: #fff;
+        
+        .role:active{
+            background-color: #df7e00;
         }
     }
 }

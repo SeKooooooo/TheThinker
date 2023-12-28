@@ -1,13 +1,12 @@
 import React from "react";
 
-const TestInfoItem = ({keys, value}) => {
-    console.log(value);
-     return(
-        <li className="info-item">
+const ItemInfo=({keys,value})=>{
+    return (
+        <li className="list-item">
             <span className="item-key">{keys}</span>
             <span className="item-value">{value}</span>
         </li>
-     )
+    )
 }
 
-export default TestInfoItem
+export default ItemInfo

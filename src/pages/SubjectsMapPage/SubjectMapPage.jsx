@@ -3,9 +3,6 @@ import Header from "../../components/Header";
 import "./SubjectMapPage.scss"
 import ListSubject from "../../components/ListSubject";
 import Title from "../../components/UI/Title";
-import ModalSearchSubject from "../../components/UI/Modal/ModalSearchSubject";
-import Subject from "../../components/UI/Subject";
-import InputSearch from "../../components/UI/Input";
 import Main from "../../components/UI/Main";
 import Input from "../../components/UI/Input";
 
