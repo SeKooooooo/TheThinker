@@ -4,7 +4,8 @@ import profile from "../image/profile.svg"
 import {Link, useLocation} from 'react-router-dom'
 
 const Header = () => {
-    const location = useLocation().pathname
+    const isTeacher= false
+    let location = useLocation().pathname
     let links
     switch(location){
         case '/':{
@@ -31,13 +32,25 @@ const Header = () => {
                 <div className="nav-links">
                 </div>)
             break}
-        default:{
-            links = (
+        case '/create_test':{
+            links=(
                 <div className="nav-links">
                     <Link to="/profile" className="profile"><img src={profile} alt=""/></Link>
                 </div>)
+            break}
+        default:{
+            links = isTeacher? 
+                    <div className="nav-links">
+                        <Link to="/create_test">Создать тест</Link>
+                        <Link to="/profile" className="profile"><img src={profile} alt=""/></Link>
+                    </div>
+                    :
+                    <div className="nav-links">
+                        <Link to="/profile" className="profile"><img src={profile} alt=""/></Link>
+                    </div>
+
+                }
                 break}
-    }
 
     return(
         <header className="header">

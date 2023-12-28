@@ -25,7 +25,18 @@
     align-items: center;
     max-width: 388px;
     margin: 0 auto 164px auto;
+    .container-input{
+        position: relative;
+        width: 388px;
+    }
 
+    .input-error{
+        position: absolute;
+        z-index: 1;
+        top:-25px;
+        left: 80px;
+        color:#d65b09;
+    }
     .input{
         width: 100%;
         border:2px solid #585858;

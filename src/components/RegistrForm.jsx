@@ -1,5 +1,6 @@
 import React from "react";
 import { useInput } from "../hooks/useInput";
+import { Link } from "react-router-dom";
 
 const RegistrForm = () => {
 
@@ -67,7 +68,7 @@ const RegistrForm = () => {
                         name="role" value="teacher" id="teacher"/>
                     </label>
                 </div>                      
-                <button disabled={!email.inputValid || !password.inputValid || !name.inputValid || !date.inputValid || !school.inputValid || !role.inputValid}  
+              <button disabled={!email.inputValid || !password.inputValid || !name.inputValid || !date.inputValid || !school.inputValid || !role.inputValid}  
                 className="btn-registration" type="submit">Зарегистрироваться</button>
             </div>
         </form>
