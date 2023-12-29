@@ -4,7 +4,7 @@ import profile from "../image/profile.svg"
 import {Link, useLocation} from 'react-router-dom'
 
 const Header = () => {
-    const isTeacher= false
+    const isTeacher= true
     let location = useLocation().pathname
     let links
     switch(location){

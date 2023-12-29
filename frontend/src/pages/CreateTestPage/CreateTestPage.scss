@@ -1,0 +1,95 @@
+.create-item-main{
+    .container-main__test{
+        color:#000;
+        height: 79vh;
+    }
+    .test-main{
+        .end-time{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:20px;
+            .title{
+                font-size: 25px;
+            }
+            button{
+                padding: 7px 10px;
+                background:#FFD94E;
+                border:1px solid #FFD94E;
+                border-radius: 10px;
+            }
+        }
+    }
+    .task{
+        margin: 60px auto 20px auto;
+        width: 920px;
+        height: 500px;
+        background-color: #FFD7463D;
+        border:2px solid #363222;
+        border-radius: 5px;
+        padding: 38px 47px 20px 47px;
+
+        .add-ask{
+            display: block;
+            padding: 8px 20px;
+            background: #FFD94E;
+            border:1px solid #FFD94E;
+            border-radius: 10px;
+            margin: 80px auto 0 auto;
+
+            &:hover{
+                background:#e49b14;
+            }
+        }
+
+
+        .task-question{
+            margin-bottom: 80px;
+            background-color: #FFF9E3;
+            font-size: 25px;
+            width: 100%;
+            height: 60px;
+            border:1px solid #FFF9E3;
+        }
+
+        .list-answer{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 62px;
+            row-gap: 20px;
+            .answer{
+                display: block;
+                background-color: #69C3BE;
+                width: 380px;
+                padding: 10px 0 10px 15px;
+                border-radius: 5px;
+                color:#FFF;
+                cursor: pointer;
+                .active{
+                    background-color: #2b8580;
+                }
+            }
+        }
+        .answer-input{
+            background-color: #9feeea;
+            border:1px solid #9feeea;
+        }
+
+    }
+
+    .asks{
+        margin: 0 auto;
+        width: 800px;
+        .ask{
+            &-title{
+                font-size: 18px;
+                padding: 8px 5px;
+                border:1px solid #000;
+            }
+            .none{
+                display: none;
+            }
+        }
+    }
+}
