@@ -9,24 +9,26 @@ import "./TestsPage.scss"
 
 
 const TestsPage = () => {
-    const name = `Тесты по ${ChangeEnding(localStorage.getItem('name'))}`
+    const name = `Тесты по ${ChangeEnding(JSON.parse(localStorage.getItem('subject')).title)}`
     const [tests, setTests] = useState([
-        {   
-            id:1,
-            topic:'Начало тригонометрии',
-            teacher:'А.С. Пушкин'
+        { 
+            id:1, 
+            title: 'Начало алгебры', 
+            time: 6000, 
+            creator:2
         },
         {   
             id:2,
-            topic:'Начало алгебры',
-            teacher:'О.Д. Канышев'
+            title:'Начало тригонометрии',
+            time: 20000,
+            creator:3
         }
     ])
     const [searchQuery, setSearchQuery] = useState('')
 
     const searchTest = useMemo(() =>{
         if(searchQuery){
-            return tests.filter(test => test.topic.toLowerCase().includes(searchQuery.toLowerCase()) || test.teacher.toLowerCase().includes(searchQuery.toLowerCase()))
+            return tests.filter(test => test.title.toLowerCase().includes(searchQuery.toLowerCase()))
         }
         return tests
     },[searchQuery,tests]) 
@@ -35,7 +37,7 @@ const TestsPage = () => {
         <div>
         <Header/>
         <Main name="tests">  
-            <Title name={name}/>
+            <Title>{name}</Title>
             <Input
                 type="text"
                 placeholder="Найти нужный тест..."

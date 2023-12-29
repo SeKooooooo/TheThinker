@@ -8,15 +8,15 @@ import Input from "../../components/UI/Input";
 
 const SubjectMapPage = () =>{
     const [subjects,setSubjects] =useState([
-        'Математика','Физика','Информатика',
-        'Английский язык','Русский язык'
+        {id: 1, title:"Математика"},
+        {id: 2, title:"Физика"}
     ])
 
     const [searchQuery, setSearchQuery] = useState('')
 
     const searchSubj = useMemo(() =>{
         if(searchQuery){
-            return subjects.filter(subject => subject.toLowerCase().includes(searchQuery.toLowerCase()))
+            return subjects.filter(subject => subject.title.toLowerCase().includes(searchQuery.toLowerCase()))
         }
         return subjects
     },[searchQuery,subjects]) 

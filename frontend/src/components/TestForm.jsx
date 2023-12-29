@@ -2,18 +2,35 @@ import React from "react";
 import Answer from "./UI/Answer";
 
 
-const TestForm = ({answers,id,changeTest}) =>{
-    const numbers={
-        0:"first",
-        1:"second",
-        2:"third",
-        3:"fouth"
-    }
+const TestForm = ({itemTest,changeTest}) =>{
+
+    const answers=[
+        {
+            id:1,
+            text:"Эверест",
+            isTrue: true
+        },
+        {
+            id:2,
+            text:"Эльбрус",
+            isTrue: false
+        },
+        {
+            id:3,
+            text:"Арарат",
+            isTrue: false
+        },
+        {
+            id:4,
+            text:"Олимп",
+            isTrue: false
+        }
+    ]
 
     return(
             <ul className="list-answer">
                 {
-                    answers.map((e,i) => <Answer key={i} text={e} index={i} id={id} changeTest={changeTest}/> )
+                    answers.map((e,i) => <Answer key={e.id} index={i} answer={e} changeTest={changeTest}/> )
                 }
             </ul>
     )

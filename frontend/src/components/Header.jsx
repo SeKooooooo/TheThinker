@@ -56,7 +56,7 @@ const Header = () => {
         <header className="header">
             <div className="container-header">
                 <nav className="header-nav">
-                    <Link to="/" className="link-main"><img src={logo} alt="Логотип" className="logo"/></Link>
+                    <Link to="/subject_map" className="link-main"><img src={logo} alt="Логотип" className="logo"/></Link>
                     {links}
                 </nav>
             </div>

@@ -8,7 +8,7 @@ const ListTest = ({tests}) => {
     return (
         <ul className="list-tests">
             {
-                tests.map(e => <Test key={e.id} topic={e.topic} teacher={e.teacher} id={e.id}/>)
+                tests.map(e => <Test key={e.id} test={e}/>)
             }
         </ul>
     )

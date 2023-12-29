@@ -4,8 +4,8 @@ import TestInfoItem from "./TestInfoItem";
 import {changeTime} from "../hooks/changeTime";
 
 const EntranceTest = ({change,countAns}) => {
-    const name = localStorage.getItem('name')
-    const genTime = Number(localStorage.getItem('genTime'))
+    const name = JSON.parse(localStorage.getItem('subject')).title
+    const genTime = Number(JSON.parse(localStorage.getItem('test')).time)
     const changeGenTime=changeTime(genTime)
     console.log(changeGenTime);
     return(

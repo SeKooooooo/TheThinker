@@ -10,7 +10,7 @@ const ListSubject = ({subjects}) => {
     return(
         <ul className="table-subjects">
             {
-                subjects.map((e,i) =><Subject name={e} key={i}/>)
+                subjects.map((e) =><Subject key={e.id} subj={e}/>)
             }
         </ul>
     )

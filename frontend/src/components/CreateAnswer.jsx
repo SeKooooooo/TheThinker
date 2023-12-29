@@ -11,7 +11,7 @@ const CreateAnswer=({index,changeAnsList})=>{
     const num = numbers[index]
     const [value, setValue] = useState()
     const clickAnswer= (value) =>{
-        
+
     }
     const changeAns=(value)=>{
         setValue(value)

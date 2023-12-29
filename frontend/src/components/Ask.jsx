@@ -17,7 +17,7 @@ const Ask=({ans})=>{
             <div onClick={changeClass} className="ask-title">{ans.question}</div>
             <ul className={askClass}>
                 {
-                    ans.answers.map(e=><li className="answers-item">{e}</li>)
+                    ans.answers.map(e=><li key={e.id} className="answers-item">{e}</li>)
                 }
             </ul>
         </div>

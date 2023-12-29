@@ -1,4 +1,15 @@
 .create-item-main{
+    .subject, .titleTest{
+        display: block;
+        margin:30px auto 30px auto;
+        background-color: #FFF9E3;
+        font-size: 25px;
+        width: 500px;
+        height: 60px;
+        border:1px solid #FFF9E3;
+        padding-left: 10px;
+        border-radius:20px;
+    }
     .container-main__test{
         color:#000;
         height: 79vh;
@@ -79,7 +90,8 @@
     }
 
     .asks{
-        margin: 0 auto;
+        margin: 50px auto;
+
         width: 800px;
         .ask{
             &-title{
@@ -91,5 +103,16 @@
                 display: none;
             }
         }
+    }
+
+    .create-test{
+        
+        display: block;
+        font-size: 20px;
+        padding:5px 10px;
+        background: #FFD94E;
+        border:1px solid #FFD94E;
+        border-radius: 10px;
+        margin-left: auto;
     }
 }

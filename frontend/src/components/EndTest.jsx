@@ -6,9 +6,8 @@ import Title from "./UI/Title";
 import {changeTime} from "../hooks/changeTime";
 
 const EndTest=({test})=>{
-    const arr= JSON.parse(localStorage.getItem("ans"))
-    const op=test.filter((el,i) => Number(arr[i])===el.good);
-    const genTime = Number(localStorage.getItem('genTime'))
+    const ansCount= localStorage.getItem("ansCount")
+    const genTime = Number(JSON.parse(localStorage.getItem('test')).time)
     const curTime=Number(localStorage.getItem('curTime'))
     const changeCurTime=changeTime(genTime-curTime)
     const changeGenTime=changeTime(genTime)
@@ -22,7 +21,7 @@ const EndTest=({test})=>{
                 </li>
                 <li className="info-item">
                     <span className="item-key">Кол-во правильных ответов:</span>
-                    <span className="item-value">{op.length}/{test.length}</span>
+                    <span className="item-value">{ansCount}/{test.length}</span>
                 </li>
                 <Link className="pass-test" to="/subject_map">Перейти к выбору предметов</Link>
             </ul>

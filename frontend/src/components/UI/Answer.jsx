@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Answer = ({text,index,id,changeTest}) =>{
+const Answer = ({index,answer,changeTest}) =>{
 
     const numbers={
         0:"first",
@@ -8,18 +8,21 @@ const Answer = ({text,index,id,changeTest}) =>{
         2:"third",
         3:"fouth"
     }
-
-    const i = index
-    const num = numbers[i]
-    const clickAnswer= (value) =>{
-        changeTest(value)
+    const num = numbers[index]
+    const clickAnswer= () =>{
+        if (answer.isTrue){
+            changeTest(1)
+        }else{
+            changeTest(0)
+        }
+            
     }
 
     return (
         <li className="answer-item"> 
             <label for={num} class="answer">
-                <input onClick={e=>clickAnswer(e.target.value)} type="radio" name="answer" id={num} value={i}/>
-                <span>{text}</span>           
+                <input onClick={e=>clickAnswer(e.target.value)} type="radio" name="answer" id={num} value={index}/>
+                <span>{answer.text}</span>           
             </label>
         </li>
     )

@@ -6,13 +6,13 @@ import EndTime from "./EndTime";
 
 const BodyTest = ({change,test}) => {
     const [numItemTest, setNumItemTest] = useState(1)
-    const [ansUser,setAnsUser] = useState([])
+    const [countTrueAns,setCountTrueAns] = useState(0)
     const [endTime, setEndTime] = useState(false)
 
     const lastId=test[test.length-1].id
-    localStorage.setItem('ans',JSON.stringify(ansUser))
-    const ChangeNum=(ans)=>{
-        setAnsUser([...ansUser, ans])
+    localStorage.setItem('ansCount',countTrueAns)
+    const ChangeNum=(countAns)=>{
+        setCountTrueAns(countTrueAns + countAns)
         if (test[numItemTest-1].id === lastId){
             change()
         }else{

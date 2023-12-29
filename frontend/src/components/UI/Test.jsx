@@ -1,10 +1,10 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 
-const Test = ({id,topic,teacher}) => {
-    const title = `Тема: ${topic}, Преподаватель: ${teacher} `
+const Test = ({test}) => {
+    const title = `Тема: ${test.title}, Преподаватель: ${test.creator} `
     const clickTest=() =>{
-        localStorage.setItem('test', id)
+        localStorage.setItem('test', JSON.stringify(test))
     }
 
     return (

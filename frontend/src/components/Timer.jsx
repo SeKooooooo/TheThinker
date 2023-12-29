@@ -3,7 +3,7 @@ import useNow from "../hooks/useNow";
 import {changeTime} from "../hooks/changeTime";
 
 const Timer = ({changeEndTime}) =>{
-    const genTime = Number(localStorage.getItem('genTime'))*1000
+    const genTime = Number(JSON.parse(localStorage.getItem('test')).time)
     const [startAt, setStartAt] = useState();
     const now = useNow(1000, startAt);
     const timeFromStart = now - (startAt ?? now);
@@ -30,10 +30,10 @@ const Timer = ({changeEndTime}) =>{
         toggleTimer()
     },[])
 
-    const curTime=Math.ceil(countDown/1000)
+    const curTime=Math.ceil(countDown)
     const changeCurTime=changeTime(curTime)
     const curChangeTime=`${changeCurTime.minute}:${changeCurTime.second}`
-    localStorage.setItem('curTime',curTime)
+    localStorage.setItem('curTime',countDown)
     return(
         <div className="timer">
             У вас осталось {curChangeTime}

@@ -11,7 +11,7 @@ const ItemTest = ({itemTest,changeTest,progress,changeEndTime}) =>{
         <div className="item-test">
             <div className="task">
                 <p className="task-question">{itemTest.question}</p>
-                <TestForm answers={itemTest.answers} id={itemTest.id} changeTest={changeTest}/>
+                <TestForm itemTest={itemTest} changeTest={changeTest}/>
                 <div className="progress">{progress}</div>
             </div>
             <div className="timer">

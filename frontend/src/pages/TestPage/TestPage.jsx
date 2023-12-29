@@ -6,31 +6,22 @@ import EntranceTest from "../../components/EntranceTest";
 import EndTest from "../../components/EndTest";
 
 const TestPage = () => {
-    localStorage.setItem('genTime',30)
     const test = [
         {
             id:1,
             question:"Какая самая высокая гора в мире?",
-            answers:["Эверест","Эльбрус","Арарат","Олимп"],
-            good:0
         },
         {
             id:2,
             question:"Кто он",
-            answers:["Lasdff","adadas","aasdfasd","ssdfsd"],
-            good:1
         },
         {   
             id:3,
             question:"Кто она",
-            answers:["Lasdff","dfasdffs","asdasd","dsf"],
-            good:2
         },
         {
             id:4,
             question:"Кто мы",
-            answers:["Lasdff","adadas","asdasd","sadasd"],
-            good:3
         }
     ]
     const [testBody, setTestBody] = useState(false)
